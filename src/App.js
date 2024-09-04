@@ -1,22 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import IniciarButton from './stories/IniciarButton'; 
+import AñadirButton from './stories/AñadirButton'; 
+import CancelButton from './stories/CancelButton'; 
 
 function App() {
+  const handleIniciarClick = () => {
+    console.log('Iniciar button clicked!');
+  };
+
+  const handleAñadirClick = () => {
+    console.log('Añadir button clicked!');
+  };
+
+  const handleCancelClick = () => {
+    console.log('Cancel button clicked!');
+  };
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Welcome to My React App</h1>
+        <IniciarButton label="Iniciar" onClick={handleIniciarClick} />
+        <AñadirButton label="Añadir" onClick={handleAñadirClick} />
+        <CancelButton label="Cancelar" onClick={handleCancelClick} />
       </header>
     </div>
   );

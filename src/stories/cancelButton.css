@@ -1,0 +1,39 @@
+.button {
+  font-family: 'Ubuntu', sans-serif;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background-color: #e74c3c; 
+  border: 2px solid #e74c3c; 
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.button.cancel:hover {
+  background-color: #c0392b;
+}
+
+.button.cancel.active {
+  background-color: #c0392b;
+}
+
+.button.cancel.finished {
+  background-color: #f1948a;
+}
+
+.button.cancel .check {
+  display: none;
+}
+
+.button.cancel.finished .check {
+  display: block !important;
+  font-size: 24px;
+  animation: scale 0.5s linear;
+}
